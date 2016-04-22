@@ -1,13 +1,23 @@
 package com.mitrakova.container;
 
-import java.io.Serializable;
 
 /**
- *
+ *abstract generic container
+ * @param <T> - type
  */
+
 public interface IObjectContainer<T> {
+    /**
+     *
+     * @param index - index
+     * @param element - value
+     */
+     void setElement(int index, T element);
 
-    void setElement(int index, T element);
-
-    T getElement(int index);
+    /**
+     *
+     * @param index - index
+     * @return element with entry index
+     */
+     T getElement(int index);
 }

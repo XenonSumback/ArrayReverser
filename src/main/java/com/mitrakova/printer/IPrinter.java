@@ -3,10 +3,16 @@ package com.mitrakova.printer;
 import com.mitrakova.container.IObjectContainer;
 
 /**
- * C
+ * Prints from container
  */
 
- interface IPrinter {
+ public interface IPrinter {
+    /**
+     *
+     * @param array - array
+     * @param <T> - type
+     * @param length - length of array
+     */
 
-    <T> void print(IObjectContainer<T> container);
+    <T> void print(IObjectContainer<T> array, int length);
 }

@@ -7,12 +7,12 @@ import com.mitrakova.container.IObjectContainer;
  */
 
  interface IReverser {
-
     /**
      *
-     * @param arr - array
-     * @param <T> - type
-     * @return -array of T
+     * @param array - array
+     * @param <T> - type of array
+     * @param length - length of array
+     * @throws ReverserException -  user exception
      */
-    <T> void reverse(IObjectContainer<T> array);
+    <T> void reverse(IObjectContainer<T> array, int length) throws ReverserException;
 }

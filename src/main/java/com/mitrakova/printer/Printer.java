@@ -1,10 +1,23 @@
 package com.mitrakova.printer;
 
+import com.mitrakova.container.IObjectContainer;
+
 /**
- * Created by wolf on 17.04.16.
+ * print arrays
+ * use ArrayContainer methods
  */
 public class Printer implements IPrinter {
-    public <T> void print(T[] arr) {
-        //System.out.print(Arrays.asList(container.get(arr)) + "\n");
+    /**
+     *
+     * @param array - object of IObjectContainer
+     * @param length - length of array
+     * @param <T> - type
+     */
+    public <T> void print(final IObjectContainer<T> array, final int length) {
+        for (int i =  0; i  < length; i++) {
+            System.out.print(array.getElement(i));
+            System.out.print(' ');
+        }
+        System.out.print("\n");
     }
 }

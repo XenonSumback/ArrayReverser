@@ -1,5 +1,7 @@
 package com.mitrakova.reverser;
 
+import com.mitrakova.container.IObjectContainer;
+
 /**
  * Class for reversing arrays
  */
@@ -15,18 +17,22 @@ public class Reverser implements IReverser {
 
     /**
      *
-     * @param arr - array
-     * @param <T> - type of array
-     * @return arr - reversed array
+     * @param array - array
+     * @param length - length of array
+     * @param <T> - type
+     * @throws ReverserException -  user exception
      */
 
-    public <T> T[] reverse(final T[] arr) {
+    public <T> void reverse(final IObjectContainer<T> array, final int length) throws ReverserException {
 
-            for (int i = 0; i < arr.length / 2; i++) {
-            T tmp = arr[i];
-            arr[i] = arr[arr.length - i - 1];
-            arr[arr.length - i - 1] = tmp;
+        try {
+            for (int i = 0; i <  length / 2; i++) {
+                T tmp = array.getElement(i);
+                array.setElement(i, array.getElement(length - i - 1)) ;
+                array.setElement(length - i - 1, tmp);
+            }
+        } catch (NullPointerException e) {
+            throw new ReverserException();
         }
-        return arr;
+        }
     }
-}

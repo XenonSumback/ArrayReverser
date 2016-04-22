@@ -1,7 +1,7 @@
 package com.mitrakova.container;
 
 /**
- * Created by wolf on 18.04.16.
+ * user Exception for interface IObjectContainer
  */
 public class ObjectArrayException extends Exception {
 }
