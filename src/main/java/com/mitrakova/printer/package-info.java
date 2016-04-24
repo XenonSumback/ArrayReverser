@@ -1,4 +1,4 @@
 /**
- * Created by wolf on 22.04.16.
+ * Contains Printer Interface, Implementation for printing arrays
  */
 package com.mitrakova.printer;

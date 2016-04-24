@@ -1,4 +1,4 @@
 /**
- * Created by wolf on 22.04.16.
+ * Contains Container Interface, Implementation, User Exception and test
  */
 package com.mitrakova.container;

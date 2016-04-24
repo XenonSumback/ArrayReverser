@@ -31,8 +31,8 @@ public class Reverser implements IReverser {
                 array.setElement(i, array.getElement(length - i - 1)) ;
                 array.setElement(length - i - 1, tmp);
             }
-        } catch (NullPointerException e) {
-            throw new ReverserException();
+        } catch (Exception e) {
+            throw new ReverserException(e);
         }
         }
     }

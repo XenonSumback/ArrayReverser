@@ -7,6 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.fail;
 
 
 public class ReverserTest {
@@ -44,5 +45,13 @@ public class ReverserTest {
         this.reverser.reverse(origin, len);
         assertArrayEquals(expectedResult, array);
     }
-
+    @Test(expected = ReverserException.class)
+    public void TestReverseException() throws ObjectArrayException, ReverserException {
+        String[] array = new String[]{"h", "e" , "l", "l", "o"};
+        String[] expectedResult = {"o", "l", "l", "e", "h"};
+        int len = 10;
+        IObjectContainer<String> origin = new ArrayContainer<String>(array);
+        this.reverser.reverse( origin, len);
+        fail();
+    }
 }

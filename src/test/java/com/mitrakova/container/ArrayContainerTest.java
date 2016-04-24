@@ -4,15 +4,17 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 
 public class ArrayContainerTest {
 
-    @Test (expected = Exception.class)
+    @Test (expected = ObjectArrayException.class)
     public void ExceptionTest() throws ObjectArrayException {
         ArrayContainer<Integer> origin = new ArrayContainer<Integer>(null);
-        origin.getElement(0);
+        fail();
     }
+
     @Test
     public void setElementTest() throws ObjectArrayException {
         Integer[] array = new Integer[]{1, 2, 3, 4, 5};

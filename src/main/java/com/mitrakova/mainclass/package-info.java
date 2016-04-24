@@ -1,4 +1,4 @@
 /**
- * Created by wolf on 22.04.16.
+ * Entry point
  */
 package com.mitrakova.mainclass;
