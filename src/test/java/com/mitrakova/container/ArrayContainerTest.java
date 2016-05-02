@@ -24,8 +24,6 @@ public class ArrayContainerTest {
         Integer element = 10;
         origin.setElement( index, element);
         assertArrayEquals(expectedResult, array);
-
-
     }
 
     @Test
@@ -35,6 +33,15 @@ public class ArrayContainerTest {
         int index = 0;
         Object actResult = origin.getElement(index);
         Object expectedResult = 1;
+        assertEquals(expectedResult, actResult);
+    }
+
+    @Test
+    public void getSizeTest() throws ObjectArrayException {
+        Integer[] array = new Integer[]{1, 2, 3, 4, 5};
+        ArrayContainer<Integer> origin = new ArrayContainer<Integer>(array);
+        Object actResult = origin.getSize();
+        Object expectedResult = 5;
         assertEquals(expectedResult, actResult);
     }
 

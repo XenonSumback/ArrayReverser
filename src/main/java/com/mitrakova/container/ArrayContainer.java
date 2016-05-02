@@ -39,4 +39,8 @@ public class ArrayContainer<T> implements IObjectContainer<T> {
     public T getElement(final int index) {
         return this.array[index];
     }
+
+    public int getSize() {
+        return array.length;
+    }
 }

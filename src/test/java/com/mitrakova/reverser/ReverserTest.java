@@ -24,7 +24,7 @@ public class ReverserTest {
         Integer[] expectedResult = {5, 4, 3, 2, 1};
         int len = array.length;
         IObjectContainer<Integer> origin = new ArrayContainer<Integer>(array);
-        this.reverser.reverse( origin, len);
+        this.reverser.reverse( origin);
         assertArrayEquals(expectedResult, array);
     }
     @Test
@@ -33,7 +33,7 @@ public class ReverserTest {
         String[] expectedResult = {"o", "l", "l", "e", "h"};
         int len = array.length;
         IObjectContainer<String> origin = new ArrayContainer<String>(array);
-        this.reverser.reverse( origin, len);
+        this.reverser.reverse( origin);
         assertArrayEquals(expectedResult, array);
     }
     @Test
@@ -42,16 +42,15 @@ public class ReverserTest {
         Double[] expectedResult = {3.3, 2.2, 1.1};
         int len = array.length;
         IObjectContainer<Double> origin = new ArrayContainer<Double>(array);
-        this.reverser.reverse(origin, len);
+        this.reverser.reverse(origin);
         assertArrayEquals(expectedResult, array);
     }
     @Test(expected = ReverserException.class)
     public void TestReverseException() throws ObjectArrayException, ReverserException {
         String[] array = new String[]{"h", "e" , "l", "l", "o"};
-        String[] expectedResult = {"o", "l", "l", "e", "h"};
         int len = 10;
         IObjectContainer<String> origin = new ArrayContainer<String>(array);
-        this.reverser.reverse( origin, len);
+        this.reverser.reverse( origin);
         fail();
     }
 }

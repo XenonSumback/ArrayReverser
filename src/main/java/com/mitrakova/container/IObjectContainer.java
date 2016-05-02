@@ -20,4 +20,6 @@ public interface IObjectContainer<T> {
      * @return element with entry index
      */
      T getElement(int index);
+
+    int getSize();
 }
